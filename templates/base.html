@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+<head>
+	<title>{% block title %}Django Web Programming{% endblock %}</title>
+
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %} "css/base.css" %}" />
+
+</head>
+
+<body>
+	<div id="header">
+		<h2 class="maintile">Jihoon's Django Web Programming</h2>
+		<h4 class="welcome">Welcom, <a href="#">shkim</a> / 
+			<a href="#">Change Password</a> /
+			<a href="#">Logout</a>
+		</h4>
+	</div>
+
+	<div id = "menu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Photo</a></li>
+
+		<li><a href="#">Add&bigtriangledown;</a>
+			<ul>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Photo</a></li>
+			</ul>
+		</li>
+
+		<li><a href="#">Change&bigtriangledown;</a>
+			<ul>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Photo</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Archive</a></li>
+		<li><a href="#">Search</a></li>
+		<li><a href="#">Admin</a></li>
+	</div>
+
+	{% block content %}{% endblock %}
+
+	{% block footer %}{% endblock %}
+
+</body>
+</html>
