@@ -23,5 +23,7 @@ urlpatterns = [
 
     url(r'^$',HomeView.as_view(), name='home'),
 
+    url(r'^bookmark/', include('bookmark.urls', namespace='bookmark')),
+
     url(r'^blog/', include('blog.urls', namespace='blog')),
 ]
