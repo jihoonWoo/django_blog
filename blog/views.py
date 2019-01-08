@@ -8,9 +8,6 @@ from blog.models import Post
 
 # Create your views here.
 
-class HomeView(TemplateView):
-	template_name = 'home.html'
-
 #--- ListView
 class PostLV(ListView):
 	model = Post
