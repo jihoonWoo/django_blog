@@ -25,7 +25,7 @@ SECRET_KEY = 't1&eqsst=6k)yh-((*g#-+jlk*a%&1dqv7h*s0@8l^#%1%^i)2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-18-217-50-241.us-east-2.compute.amazonaws.com','18.217.50.241']
 
 
 # Application definition
@@ -122,9 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]	#added
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
-
-
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
